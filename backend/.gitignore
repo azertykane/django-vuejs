@@ -1,0 +1,30 @@
+# Environnement virtuel
+venv/
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Django DB
+*.sqlite3
+
+#migration
+*/migrations/__pycache__/
+*/migrations/*.pyc
+*/migrations/*.pyo
+*/migrations/*.log
+
+# Node.js
+node_modules/
+dist/
+build/
+
+# Logs et IDE
+*.log
+*.idea/
+*.vscode/
+.DS_Store
+
+# media 
+/media/

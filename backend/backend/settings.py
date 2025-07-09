@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-fl9)l2fs6#3@2ptfyz-kmzk3u^5u$5#w&a=@f7e93l=t3y)1!p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://django-vuejs.onrender.com"]
 # pour Google / Mapbox / Notification
 MAPBOX_ACCESS_TOKEN = os.getenv("MAPBOX_ACCESS_TOKEN")
 GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
@@ -59,6 +59,7 @@ AUTH_USER_MODEL = "comptes.Utilisateur"
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

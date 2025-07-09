@@ -32,7 +32,11 @@ SECRET_KEY = 'django-insecure-fl9)l2fs6#3@2ptfyz-kmzk3u^5u$5#w&a=@f7e93l=t3y)1!p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "django-vuejs-1.onrender.com", 
+]
 # pour Google / Mapbox / Notification
 MAPBOX_ACCESS_TOKEN = os.getenv("MAPBOX_ACCESS_TOKEN")
 GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")

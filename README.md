@@ -1,11 +1,5 @@
-# 📦 Location Sociale – Backend Django
-
-Ce projet est un backend Django REST pour une plateforme de gestion de locations sociales avec paiements, contrats, problèmes signalés.
-
-## 🚀 Démarrage rapide
-
-### 🔧 Prérequis
-
+# Location Sociale – Backend Django
+###  Prérequis
 - Python 3.9 ou plus
 - pip
 - Git
@@ -13,11 +7,24 @@ Ce projet est un backend Django REST pour une plateforme de gestion de locations
 - SQLite (déjà intégré à Python)
 
 -----------------------------------
-
-### ⚙️ Installation (backend)
-
 1. **Cloner le dépôt**
 ```bash
 git clone https://github.com/azertykane/Django-vuejs.git
-cd location/backend/
+# 2. Créer un environnement virtuel
+python -m venv venv
+# (Windows) venv\Scripts\activate
+# (Unix/macOS) source venv/bin/activate
+
+# 3. Installer les dépendances
+pip install -r requirements.txt
+
+# 4. Copier le fichier d'exemple d'environnement
+cp .env.example .env
+# Remplir les valeurs dans le fichier `.env`
+
+# 5. Appliquer les migrations
+cd backend
+python manage.py migrate
+
+# 6. Lancer le serveur local
 python manage.py runserver
